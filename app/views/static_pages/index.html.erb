@@ -1,6 +1,7 @@
 <% if current_user? %>
-  <%= link_to "Logout", logout_path, method: "delete" %>
+  <h1> Welcome <%= current_user.name %>! </h1>
+  <%= link_to "Logout", logout_path, method: "delete", class: "btn btn-danger" %>
 <% else %>
-  <%= link_to "Login", login_path %>
-  <%= link_to "Sign Up", sign_up_path %>
+  <%= link_to "Login", login_path, class: "btn btn-primary" %>
+  <%= link_to "Sign Up", sign_up_path, class: "btn btn-success" %>
 <% end %>
