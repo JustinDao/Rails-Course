@@ -1,0 +1,14 @@
+<!-- INDEX PAGE -->
+
+<% @courses.each do |c| %>
+	
+	<a href="/courses/<%=c.id%>">
+		<%= c.title %>
+		<br>
+		<%= c.number %>
+	</a>
+
+	<br>
+	<br>
+
+<% end %>

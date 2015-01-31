@@ -4,4 +4,5 @@ class User < ActiveRecord::Base
 	validates_uniqueness_of :email
 	validates :password, length: {minimum: 6}
 
+	has_many :reviews
 end

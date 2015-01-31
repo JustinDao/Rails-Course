@@ -1,0 +1,24 @@
+<!-- NEW REVIEW PAGE -->
+
+<%= form_for @review, url: "/reviews/create" do |f| %>
+	
+	<%= f.label :course_id, "Course" %>
+	<%= f.select :course_id, Course.all.map{|c| [c.title, c.id] } %>
+
+	<br>
+
+	<%= f.label :rating %>
+	<%= f.number_field :rating, min: 0, max: 5 %>
+
+
+
+	<br>
+
+	<%= f.label :comment %>
+	<%= f.text_area :comment %>
+
+	<br>
+
+	<%= f.submit %>
+
+<% end %>

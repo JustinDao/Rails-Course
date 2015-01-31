@@ -5,6 +5,29 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'static_pages#index'
 
+  # Route to about page.
+  get '/about', to: 'static_pages#about'
+
+  # routes for courses
+  get '/courses', to: 'courses#index'
+  get '/courses/:id', to: 'courses#show'
+
+  # routes for reviews
+  get '/reviews/new', to: 'reviews#new'
+  post '/reviews/create', to: 'reviews#create'
+
+
+
+
+
+
+
+
+
+
+
+
+
   resources :users
 
   get '/login', to: 'sessions#new', as: 'login'
